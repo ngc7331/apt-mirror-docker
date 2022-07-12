@@ -1,0 +1,37 @@
+############# config #############
+set base_path         /apt-mirror
+set mirror_path       $base_path/mirror
+set skel_path         $base_path/skel
+set var_path          $base_path/var
+set cleanscript       $var_path/clean.sh
+set postmirror_script $var_path/postmirror.sh
+# set defaultarch       <arch> # (i386 / amd64 / arm64)
+# set run_postmirror    0 # uncomment this to disable postmirror.sh
+set nthreads          20
+set _tilde            0
+############# end config #############
+
+############# ubuntu official #############
+# deb http://archive.ubuntu.com/ubuntu artful main restricted universe multiverse
+# deb http://archive.ubuntu.com/ubuntu artful-security main restricted universe multiverse
+# deb http://archive.ubuntu.com/ubuntu artful-updates main restricted universe multiverse
+# deb http://archive.ubuntu.com/ubuntu artful-proposed main restricted universe multiverse
+# deb http://archive.ubuntu.com/ubuntu artful-backports main restricted universe multiverse
+
+# deb-src http://archive.ubuntu.com/ubuntu artful main restricted universe multiverse
+# deb-src http://archive.ubuntu.com/ubuntu artful-security main restricted universe multiverse
+# deb-src http://archive.ubuntu.com/ubuntu artful-updates main restricted universe multiverse
+# deb-src http://archive.ubuntu.com/ubuntu artful-proposed main restricted universe multiverse
+# deb-src http://archive.ubuntu.com/ubuntu artful-backports main restricted universe multiverse
+
+# clean http://archive.ubuntu.com/ubuntu
+############# end ubuntu official #############
+
+############# ubuntu tailscale #############
+# deb-amd64 https://pkgs.tailscale.com/stable/ubuntu focal main
+# deb-i386 https://pkgs.tailscale.com/stable/ubuntu focal main
+
+# clean https://pkgs.tailscale.com/stable/ubuntu
+############# end ubuntu tailscale #############
+
+# add your own mirror here
