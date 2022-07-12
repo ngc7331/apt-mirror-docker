@@ -8,5 +8,6 @@ $ docker run -d --restart=unless-stopped \
 ```
 
 To edit mirror config:
-1. add a volume when starting the container: `-v /path/to/config.list:/etc/apt/mirror.list:ro`
-2. edit `config.list`
+1. create a file `config.list`
+2. copy the content of `mirror.list` into it and modify it as you want
+3. add a volume when starting the container: `-v /path/to/config.list:/etc/apt/mirror.list:ro`
